@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<!-- if-switch statement examples -->
+<head>
+    <title>Week5 Samples</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        var time = 11;
+        if (time < 10) {
+            greeting = "Good morning";
+        } else if (time < 20) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+        console.log(greeting);
+
+        var grade = 'B';
+        switch (grade) {
+            case 'A': document.write("Good job<br />");
+                break;
+            case 'B': document.write("Pretty good<br />");
+                break;
+            case 'C': document.write("Passed<br />");
+                break;
+            case 'D': document.write("Not so good<br />");
+                break;
+            case 'F': document.write("Failed<br />");
+                break;
+            default: document.write("Unknown grade<br />")
+        }
+        document.write("Exiting switch block");
+
+    </script>
+    Hello
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<!-- Loop examples -->
+
+<head>
+    <title>Week5 Samples</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        for (i = 0; i < 15; i += 2) {
+            console.log("The number is " + i);
+        }
+
+        i = 5;
+        while (i > 0) {
+            console.log("The number is " + i);
+            i--;
+        }
+
+
+        i = 5;
+        do {
+            console.log("The number is " + i);
+            i--;
+        } while (i > 5);
+
+        var student = { fname: "Kerem", lname: "Karaca", id: 234 };
+        for (x in student) {
+            console.log("prop name:"+x+" value:"+student[x])
+        }
+
+        var names = ["Kerem", "Kenan", "Kaya"];
+        var name;
+
+        for (name of names) {
+            console.log(name);
+        }
+    </script>
+    Hello
+</body>
+
+</html>

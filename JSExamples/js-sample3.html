@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<!-- JS Variable definition(Global/Local) examples -->
+<head>
+    <title>Week5 Samples</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        var name = "Ali";
+        console.log(name+" "+typeof name);
+        var money;
+        console.log(money+" "+typeof money);
+        money = 2000.50;
+        console.log(money+" "+typeof money);
+
+        var city = "istanbul";      // Declare a global variable
+        console.log("City:"+city);
+        function checkscope( ) {
+               var city = "ankara";  // Declare a local variable
+               console.log("City:"+city);
+        }
+        checkscope();
+        console.log("City:"+city);
+    </script>
+    Hello
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Media Examples</title>
@@ -16,11 +17,12 @@
                 ctx.strokeRect(80, 80, 100, 100);
                 ctx.moveTo(30, 30);
                 ctx.lineTo(130, 130);
-                ctx.stroke();     
+                ctx.stroke();
             }
         }
     </script>
 </head>
+
 <body onload="draw();">
     <h2>Canvas</h2>
     <canvas id="canvas" width="400" height="400"></canvas>
@@ -29,17 +31,26 @@
         <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
     </svg>
     <svg width="200" height="200">
-        <rect   width="200" height="100" 
-                style="fill:rgb(200,0,255);stroke-width:10;stroke:rgb(255,0,0)">
+        <rect width="200" height="100" style="fill:rgb(200,0,255);stroke-width:10;stroke:rgb(255,0,0)">
     </svg>
     <h2>Video</h2>
-    <video width="320" height="240" controls autoplay muted>
-        <source src="movie.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <iframe src="https://olafwempe.com/mp3/silence/silence.mp3" type="audio/mp3" 
+    allow="autoplay" id="audio" style="display:none">  </iframe>
+        <video autoplay loop playsinline preload="metadata">
+            <source src="movie.mp4" type="video/mp4">
+        </video>
+
+        <h2>ccccccccccc</h2>
+        <video width="320" height="240" controls autoplay>
+            <source src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+  
+
+
 
     <h2>Audio</h2>
-    <audio controls autoplay>
+    <audio controls autoplay mute>
         <source src="audio.mp3" type="audio/mp3">
     </audio>
 </body>
