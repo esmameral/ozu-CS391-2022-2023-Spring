@@ -4,18 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Create a new Student</title>
+    <script src=".\scripts\functions.js">
+
+    </script>
 </head>
 
 <body>
 
     <h1>Enter Your Information</h1>
-    <form method="get" action="success.html">
-        <input type="text" name="sname" placeholder="student name" required maxlength="20" minlength="3">
+    <form method="get" action="success.html" onSubmit="return validateForm()">
+        <input type="text" name="sname" placeholder="student name" id="student_name">
         <br />
-        <input type="number" name="id" placeholder="id" required max="100" min="1">
+        <input type="text" name="id" placeholder="student id" required id="student_id">
         <br />
-        <input type="email" name="email" placeholder="email" required>
+        <input type="email" name="email" placeholder="email" required id="student_email">
         <br />
+        <!--
         <select name="program" size="3" placeholder="Select your program" multiple>
             <option value="CSE">Computer Science Department</option>
             <option value="ME">Mechanical Engineering Department</option>
@@ -32,10 +36,14 @@
         </textarea>
         <br />
         <input type="date" name="birthdate" placeholder="Birthdate">
-        <input type="submit" name="saveButton" value="Save">
+        -->
+        <input type="submit" name="saveButton"  value="Save">
+
+        <!--
         <input type="button" name="saveButton2" value="Input Button Example">
         <button type="button">Button Example</button>
         <button type="submit">Submit Button Example</button>
+        -->
     </form>
 
 </body>
