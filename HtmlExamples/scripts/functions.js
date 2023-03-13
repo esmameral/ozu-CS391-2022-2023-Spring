@@ -67,20 +67,22 @@ function validateForm(){
  return true;
 }
 function saveStudent(student) {
+  
     if(localStorage){
         localStorage.setItem("mystudent",JSON.stringify(student));
         
     }else{
         alert("Sorry, your browser does not support local storage.");
     }
+    
 }
 
-data={question1, question2, question3, question4, question5}
-question={questionText,correctAnswer,studentAnswer}
+
 
 function printWelcomeMessage() {
     if(localStorage){
         var student = JSON.parse(localStorage.getItem("mystudent"));
+
         var name=student.name;
         console.log("name:"+name);
         document.getElementById("welcome").innerHTML="Hello "+ name+", welcome to our school";
