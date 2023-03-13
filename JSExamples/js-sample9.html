@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<!--
+    JavaScript Functions
+-->
+
+<head>
+    <title>js Samples-9</title>
+    <meta charset="utf-8" />
+    <script>
+        function calculateAge() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var birthYear = document.getElementById('birthYear').value;
+            var age = year - birthYear;
+            document.getElementById('age').value = age;
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Form submit example</h2>
+    <form onsubmit="return calculateAge()">
+        <label for="birthYear">Birth Year</label>
+        <input type="number" id="birthYear" min="1960" max="2019" required>
+        <input type="number" id="age" min="1" max="99" readonly disabled>
+        <input type="submit" value="Calculate My Age">
+        <button type="submit" value="Calculate my Age">Calculate Age</button>
+    </form>
+
+    <h2>onclick example</h2>
+    <h3 onclick="this.innerHTML='Ooops!'">
+        Click on this text!
+    </h3>
+ 
+    <h3 id="h3">
+        Second way for using events
+    </h3>
+    <script>
+        document.getElementById("h3").onclick = function (event) { this.innerHTML = "Hello"; }
+    </script>
+</body>
+
+
+</html>

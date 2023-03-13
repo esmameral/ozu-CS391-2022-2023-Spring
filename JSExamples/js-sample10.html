@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Callback Functions
+-->
+
+<head>
+    <script>
+        console.log("Hello");
+        setTimeout(function () {
+            console.log("This message is shown after 3 seconds");
+        }, 3000);
+        console.log("Bye bye");
+       /*
+        function myFunction(param1, param2, callback) {
+            alert('this runs first.\n\n with param: ' +
+                param1 + ', ' + param2 + '.');
+            setTimeout(function () { alert("Hi") }, 5000);
+            callback();
+        }
+        */
+        function myFunction(param1, param2, callback) {
+            alert('this runs first.\n\n with param: ' +
+                param1 + ', ' + param2 + '.');
+            callback();
+        }
+
+        myFunction('a', 'b', function () {
+            alert('and now callback runs!');
+        });
+
+    </script>
+</head>
+
+<body>
+    Callback examples
+
+</body>
+
+
+</html>

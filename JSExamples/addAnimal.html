@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animal Shelter</title>
+    <script src="scripts/myFunctions.js"></script>
+</head>
+
+<body>
+    <form action="success.html" method="get" onsubmit="return validateForm()" >
+        <h2>Add New Animal</h2>
+        <label for="breed">Breed</label>
+        <input type="text" list="breedlist" id="breed">
+        <datalist id="breedlist">
+            <option value="Stray Cat">
+            <option value="Van Cat">
+            <option value="Ankara Cat">
+            <option value="Scottish Fold Cat">
+            <option value="British Short Hair">
+            <option value="Stay Dog">
+            <option value="Terrier Dog">
+            <option value="Kangal Dog">
+        </datalist>
+        <br>
+        <label for="name">Name</label>
+        <input type="text" id="name" minlength="3" maxlength="20">
+        <br>
+        <label for="age">Age</label>
+        <input type="number" id="age" min="0" max="20">
+        <br>
+        <input type="radio" name="sex" id="male" value="Male" checked>
+        <label for="male">Male</label>
+        <input type="radio" name="sex" id="female" value="Female">
+        <label for="type">Female</label>
+        <br>
+        <label for="desc"><b>Description:</b></label>
+        <br>
+        <textarea rows="5" columns="25" id="desc"></textarea>
+        <br>
+
+        <button type="submit">Save</button>
+        
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Looping arrays
+-->
+
+<head>
+    <title>js Samples-8</title>
+    <meta charset="utf-8" />
+
+
+</head>
+
+<body>
+    <h2>Pet List</h2>
+    <div id="pets"></div>
+    <h2>Pet Owners</h2>
+    <div id=owners></div>
+    <h2>Pet Owners</h2>
+    <div id=owners2></div>
+    <script>
+        var pets = ["Cat", "Dog", "Bird", "Rabbit", "Hamster"];
+        var text = "<ul>";
+        for (i = 0; i < pets.length; i++) {
+            text += "<li>" + pets[i] + "</li>";
+        }
+        text += "</ul>";
+
+        document.getElementById("pets").innerHTML = text;
+
+        var owners = [{ firstName: "Linda", lastName: "James", age: 46 },
+        { firstName: "John", lastName: "Smith", age: 21 },
+        { firstName: "Karen", lastName: "Robert", age: 25 }
+        ];
+
+
+        table = "<table border='1'>";
+        for (i = 0; i < owners.length; i++) {
+            table += "<tr>"
+            table += "<td>" + owners[i].firstName + "</td><td> " +
+                owners[i].lastName + "</td><td> " +
+                owners[i].age + "</td>";
+            table += "</tr>"
+        }
+        table += "</table>";
+
+        document.getElementById("owners").innerHTML = table;
+
+        table2 = "<table border='1'>";
+        for (owner of owners) {
+            table2 += "<tr>"
+            table2 += "<td>" + owner.firstName + "</td><td> " +
+                owner.lastName + "</td><td> " +
+                owner.age + "</td>";
+            table2 += "</tr>"
+        }
+        table2 += "</table>";
+
+        document.getElementById("owners2").innerHTML = table2;
+
+
+    </script>
+</body>
+
+</html>
