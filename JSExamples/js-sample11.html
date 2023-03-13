@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Array Methods
+-->
+
+<head>
+    <title>Week4 Samples</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h2>Array Methods</h2>
+
+    <script>
+        console.log("MAP EXAMPLE-1");
+        var numbers = [25, 121, 9, 81];
+        var roots = numbers.map(Math.sqrt);
+        console.log("roots are : " + roots);
+
+        console.log("MAP EXAMPLE-2");
+        var nums = [6.5, 21, 3, 5, 7];
+        var newArray = nums.map(myFunction)
+
+        function myFunction(num) {
+            return num * 10;
+        }
+
+        console.log("newArray : " + newArray);
+
+        console.log("SORT EXAMPLE-1");
+        var names = ["Naci", "Zeynep", "Hasan", "Ahmet"];
+        console.log(names);
+        console.log(names.sort());
+        
+        console.log("SORT EXAMPLE-2");
+        var numbers = [40, 100, 1, 5, 25, 10];
+        console.log(numbers);
+        console.log("ASC SORTED ");
+        console.log(numbers.sort(function (a, b) { return a - b }));
+
+        console.log("DESC SORTED ");
+        console.log(numbers.sort(function (a, b) { return b - a }));
+        console.log(numbers);
+        console.log("FILTER EXAMPLE");
+        var ages = [9, 32, 33, 12, 40];
+        console.log(ages);
+        function checkAdult(age) {
+            return age >= 16;
+        }
+        var adults = ages.filter(checkAdult);
+        console.log(adults);
+        console.log(ages);
+
+        console.log("REDUCE EXAMPLE-1");
+        var numberList = [100, 200, 50];
+
+        function sumofArray(prevValue, num) {
+            let sum=prevValue + num;
+            console.log("prevValue:"+prevValue+" num:"+num+" sum:"+sum)
+            return sum;
+        }
+        var result1 = numberList.reduce(sumofArray);
+        console.log("Reduce result:" + result1);
+        
+        console.log("REDUCE EXAMPLE-2");
+        var result2 = numberList.reduce(sumofArray, 5000);
+        console.log("Reduce result:" + result2);
+
+        
+
+        console.log("LOOP EXAMPLE");
+        let ranks = ['A', 'B', 'C'];
+        for (let i = 0; i < ranks.length; i++) {
+            console.log(ranks[i]);
+        }
+
+        console.log("FOREACH EXAMPLE-1");
+        ranks.forEach(function (rank) {
+            console.log(rank);
+        });
+
+        console.log("FOREACH EXAMPLE-2");
+        function printRanks(rank) {
+            console.log(rank);
+        }
+        ranks.forEach(printRanks);
+
+
+    </script>
+</body>
+
+</html>
