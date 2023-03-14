@@ -65,7 +65,6 @@ function printAnimals(){
             var key=localStorage.key(i);
             var animal=JSON.parse(localStorage.getItem(key));
             text += "<tr><td>"+animal.name+"</td><td>"+animal.breed+"</td><td>"+animal.age+"</td></tr>";
-
             console.log(animal);
         }
         

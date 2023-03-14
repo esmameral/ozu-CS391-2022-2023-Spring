@@ -20,11 +20,12 @@
 
         console.log("MAP EXAMPLE-2");
         var nums = [6.5, 21, 3, 5, 7];
+        function myFunction(currentValue,index,arr) {
+            return currentValue * 10;
+        }
         var newArray = nums.map(myFunction)
 
-        function myFunction(num) {
-            return num * 10;
-        }
+       
 
         console.log("newArray : " + newArray);
 
